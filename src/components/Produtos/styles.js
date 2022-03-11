@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Tituto = styled.h1`
+  font-size: xx-large;
   text-align: center;
 `
 export const Box = styled.div`
@@ -15,7 +16,6 @@ export const Card = styled.div`
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
-
   display: flex;
   flex-direction: column;
 `
@@ -29,14 +29,7 @@ export const Image = styled.img`
 export const Descricao = styled.div`
   color: #000;
   padding: 0 0 10px 0;
-
-
-
   flex-grow: 1;
-
-
-
-
 `
 export const TituloCard = styled.h4`
  font-size: 20px;
@@ -52,14 +45,7 @@ export const Btn = styled.button`
   margin: 15px 0;
   background: #50d603;
   transition: all ease-in-out .3s;
-
-
-
-
   align-self: center;
-
-
-
   &:hover {
       background: transparent;
   }

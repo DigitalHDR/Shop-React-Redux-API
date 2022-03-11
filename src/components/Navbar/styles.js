@@ -11,7 +11,7 @@ export const Header = styled.header`
   justify-content: space-between;
 `
 export const Titulo = styled.h3`
-  font-size: 20px;
+  font-size: x-large;
   font-weight: bold;
 `
 export const Nav = styled.div`

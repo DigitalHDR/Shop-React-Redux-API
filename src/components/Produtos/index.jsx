@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { PaddingTopGlobal } from '../../styles/GlobalStyles'
 import {
   Tituto,
   Card,
@@ -7,8 +8,9 @@ import {
   Descricao,
   TituloCard,
   Paragrafo,
-  Btn
+  Btn,
 } from './styles'
+
 
 export default function Produtos() {
   const [data, setData] = useState([])
@@ -44,29 +46,24 @@ export default function Produtos() {
 
   const MostrarProdutos = () => {
     return (
-      <div>
+      <PaddingTopGlobal>
         <Tituto>Produtos a venda</Tituto>
-
         <Box>
           {filter.map((produto) => {
             return (
               <Card key={produto.id}>
-                
                 <Image src={produto.image} alt={produto.title} />
-                
+                <hr />
                 <Descricao>
                   <TituloCard>{produto.title.substring(0, 10)}</TituloCard>
-                  <Paragrafo>{produto.description.substring(0, 30)}</Paragrafo>
+                  <Paragrafo>{produto.description.substring(0, 50) + '...'}</Paragrafo>
                 </Descricao>
-
                 <Btn>Comprar</Btn>
-                
               </Card>
             )
           })}
         </Box>
-
-      </div>
+      </PaddingTopGlobal>
     )
   }
 

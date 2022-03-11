@@ -27,4 +27,7 @@ export default createGlobalStyle`
 export const ContainerGlobal = styled.section`
   padding: 0px 7%;
 `
+export const PaddingTopGlobal = styled.div`
+  padding: 40px 0;
+`
 
