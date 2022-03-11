@@ -51,20 +51,16 @@ export default function Produtos() {
           {filter.map((produto) => {
             return (
               <Card key={produto.id}>
-
-                <Image
-                  src={produto.image}
-                  alt={produto.title}
-                />
-
-                <hr />
+                
+                <Image src={produto.image} alt={produto.title} />
                 
                 <Descricao>
                   <TituloCard>{produto.title.substring(0, 10)}</TituloCard>
                   <Paragrafo>{produto.description.substring(0, 30)}</Paragrafo>
-                  <Btn>Comprar</Btn>
                 </Descricao>
 
+                <Btn>Comprar</Btn>
+                
               </Card>
             )
           })}
