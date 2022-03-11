@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { PaddingTopGlobal } from '../../styles/GlobalStyles'
+import Botao from '../Botao'
+
 import {
   Tituto,
   Card,
@@ -17,7 +19,7 @@ export default function Produtos() {
   const [filter, setFilter] = useState(data)
   const [loading, setLoading] = useState(false)
   let componentMounted = true
-
+  
   useEffect(() => {
     const getProdutos = async () => {
       setLoading(true)
@@ -26,7 +28,6 @@ export default function Produtos() {
         setData(await response.clone().json())
         setFilter(await response.json())
         setLoading(false)
-        console.log(filter)
       }
 
       return () => {
@@ -44,9 +45,22 @@ export default function Produtos() {
     )
   }
 
+  const filterProduto = (categoria) => {
+    const resultadoFilter = data.filter((resp) => resp.category === categoria)
+    return setFilter(resultadoFilter)
+  }
+
   return (
     <PaddingTopGlobal>
       <Tituto>Produtos a venda</Tituto>
+
+      <Box>
+        <Botao onClick={() => setFilter(data)}>all</Botao>
+        <Botao onClick={() => filterProduto("men's clothing")}>Men's clothing</Botao>
+        <Botao onClick={() => filterProduto("women's clothing")}>Women's clothing</Botao>
+        <Botao onClick={() => filterProduto("jewelery")}>Jewelery</Botao>
+        <Botao onClick={() => filterProduto("electronics")}>Electronic</Botao>
+      </Box>
       <Box>
         {loading ? <Loading /> : <>{filter.map((produto) => {
           return (
