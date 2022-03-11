@@ -1,5 +1,6 @@
 import React from 'react'
 import './navbar.css'
+import { Link } from "react-router-dom";
 import { Container, Header, Titulo, NavUl, NavLi, NavA } from './styles'
 
 import { SiHomeadvisor as SiH, SiCountingworkspro as SiC, SiOpsgenie as SiO } from "react-icons/si";
@@ -14,8 +15,8 @@ export default function Navbar() {
         <Header>
           <Titulo>REACT REDUX API</Titulo>
           <NavUl>
-            <NavLi><NavA href='#'><SiH className='Si' />Home</NavA></NavLi>
-            <NavLi><NavA href='#'><SiC className='Si' />Produtos</NavA></NavLi>
+            <NavLi><NavA href='#'><SiH className='Si' /><Link to="/">Home</Link></NavA></NavLi>
+            <NavLi><NavA href='#'><SiC className='Si' /><Link to="produtos">Produtos</Link></NavA></NavLi>
             <NavLi><NavA href='#'><SiO className='Si' />Contato</NavA></NavLi>
             <NavLi ><NavA href='#'><BiLo className='Si' />Logar</NavA></NavLi>
             <NavLi ><NavA href='#'><FaRe className='Si' />Registrar</NavA></NavLi>

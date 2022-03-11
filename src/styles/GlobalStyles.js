@@ -19,7 +19,7 @@ export default createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   }
 
-  html {
+  html, a {
     color: white;
   }
 `
