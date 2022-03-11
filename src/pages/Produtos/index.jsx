@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { PaddingTopGlobal } from '../../styles/GlobalStyles'
-import BotaoFilter from '../BotaoFilter'
-import BotaoCard from '../BotaoCard'
+import BotaoFilter from '../../components/BotaoFilter'
+import BotaoCard from '../../components/BotaoCard'
 
 import {
   Tituto,
@@ -19,7 +19,7 @@ export default function Produtos() {
   const [filter, setFilter] = useState(data)
   const [loading, setLoading] = useState(false)
   let componentMounted = true
-  
+
   useEffect(() => {
     const getProdutos = async () => {
       setLoading(true)
@@ -69,7 +69,10 @@ export default function Produtos() {
               <hr />
               <Descricao>
                 <TituloCard>{produto.title.substring(0, 10)}</TituloCard>
-                <Paragrafo>{produto.description.substring(0, 50) + '...'}</Paragrafo>
+                <Paragrafo>
+                  {produto.description.substring(0, 50) + '...'}
+                </Paragrafo>
+                <p><b>R$ {produto.price}</b></p>
               </Descricao>
               <BotaoCard>Comprar</BotaoCard>
             </Card>

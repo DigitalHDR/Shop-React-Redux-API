@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar'
-import Produtos from './components/Produtos'
+import Produtos from './pages/Produtos'
 import { ContainerGlobal } from './styles/GlobalStyles'
 
 export default function App() {

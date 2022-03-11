@@ -15,7 +15,7 @@ export default function Navbar() {
           <Titulo>REACT REDUX API</Titulo>
           <NavUl>
             <NavLi><NavA href='#'><SiH className='Si' />Home</NavA></NavLi>
-            <NavLi><NavA href='#'><SiC className='Si' />Sobre</NavA></NavLi>
+            <NavLi><NavA href='#'><SiC className='Si' />Produtos</NavA></NavLi>
             <NavLi><NavA href='#'><SiO className='Si' />Contato</NavA></NavLi>
             <NavLi ><NavA href='#'><BiLo className='Si' />Logar</NavA></NavLi>
             <NavLi ><NavA href='#'><FaRe className='Si' />Registrar</NavA></NavLi>
