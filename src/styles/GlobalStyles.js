@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
   * {
@@ -18,7 +18,13 @@ export default createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   }
+
+  html {
+    color: white;
+  }
 `
 
-
+export const ContainerGlobal = styled.section`
+  padding: 0px 7%;
+`
 
