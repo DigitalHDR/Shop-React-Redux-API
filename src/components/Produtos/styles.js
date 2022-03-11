@@ -39,14 +39,3 @@ export const Paragrafo = styled.p`
   padding: 0 10px;
   font-weight: 200;
 `
-export const Btn = styled.button`
-  border: 1px solid #50d603;
-  padding: 5px 10px;
-  margin: 15px 0;
-  background: #50d603;
-  transition: all ease-in-out .3s;
-  align-self: center;
-  &:hover {
-      background: transparent;
-  }
-`

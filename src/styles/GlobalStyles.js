@@ -30,4 +30,27 @@ export const ContainerGlobal = styled.section`
 export const PaddingTopGlobal = styled.div`
   padding: 40px 0;
 `
-
+export const BtnGlobal = styled.button`
+  border: 1px solid #50d603;
+  padding: 5px 10px;
+  margin: 15px 5px;
+  background: #50d603;
+  transition: all ease-in-out .3s;
+  font-size: medium;
+  align-self: center;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+  }
+`
+export const BotaoCardGlobal = styled.button`
+  border: 1px solid #50d603;
+  padding: 5px 10px;
+  margin: 15px 0;
+  background: #50d603;
+  transition: all ease-in-out .3s;
+  align-self: center;
+  &:hover {
+      background: transparent;
+  }
+`

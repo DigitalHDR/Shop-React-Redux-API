@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { PaddingTopGlobal } from '../../styles/GlobalStyles'
-import Botao from '../Botao'
+import BotaoFilter from '../BotaoFilter'
+import BotaoCard from '../BotaoCard'
 
 import {
   Tituto,
@@ -10,7 +11,6 @@ import {
   Descricao,
   TituloCard,
   Paragrafo,
-  Btn,
 } from './styles'
 
 
@@ -55,11 +55,11 @@ export default function Produtos() {
       <Tituto>Produtos a venda</Tituto>
 
       <Box>
-        <Botao onClick={() => setFilter(data)}>all</Botao>
-        <Botao onClick={() => filterProduto("men's clothing")}>Men's clothing</Botao>
-        <Botao onClick={() => filterProduto("women's clothing")}>Women's clothing</Botao>
-        <Botao onClick={() => filterProduto("jewelery")}>Jewelery</Botao>
-        <Botao onClick={() => filterProduto("electronics")}>Electronic</Botao>
+        <BotaoFilter onClick={() => setFilter(data)}>all</BotaoFilter>
+        <BotaoFilter onClick={() => filterProduto("men's clothing")}>Men's clothing</BotaoFilter>
+        <BotaoFilter onClick={() => filterProduto("women's clothing")}>Women's clothing</BotaoFilter>
+        <BotaoFilter onClick={() => filterProduto("jewelery")}>Jewelery</BotaoFilter>
+        <BotaoFilter onClick={() => filterProduto("electronics")}>Electronic</BotaoFilter>
       </Box>
       <Box>
         {loading ? <Loading /> : <>{filter.map((produto) => {
@@ -71,7 +71,7 @@ export default function Produtos() {
                 <TituloCard>{produto.title.substring(0, 10)}</TituloCard>
                 <Paragrafo>{produto.description.substring(0, 50) + '...'}</Paragrafo>
               </Descricao>
-              <Btn>Comprar</Btn>
+              <BotaoCard>Comprar</BotaoCard>
             </Card>
           )
         })}</>}
