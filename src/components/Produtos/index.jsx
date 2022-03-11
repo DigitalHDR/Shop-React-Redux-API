@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { Tituto, Card, Box } from './styles'
+import {
+  Tituto,
+  Card,
+  Box,
+  Image,
+  Descricao,
+  TituloCard,
+  Paragrafo,
+  Btn
+} from './styles'
 
 export default function Produtos() {
   const [data, setData] = useState([])
@@ -43,18 +52,18 @@ export default function Produtos() {
             return (
               <Card key={produto.id}>
 
-                <img
-                  width={150}
-                  height={150}
+                <Image
                   src={produto.image}
                   alt={produto.title}
                 />
 
-                <div>
-                  <h5>{produto.title.substring(0, 10)}</h5>
-                  <p>{produto.description.substring(0, 50)}</p>
-                  <button>Comprar</button>
-                </div>
+                <hr />
+                
+                <Descricao>
+                  <TituloCard>{produto.title.substring(0, 10)}</TituloCard>
+                  <Paragrafo>{produto.description.substring(0, 30)}</Paragrafo>
+                  <Btn>Comprar</Btn>
+                </Descricao>
 
               </Card>
             )
