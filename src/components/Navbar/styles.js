@@ -7,6 +7,7 @@ export const Container = styled.div`
 `
 export const Header = styled.header`
   display: flex;
+  height: 60px;
   align-items: center;
   justify-content: space-between;
 `
@@ -14,17 +15,21 @@ export const Titulo = styled.h3`
   font-size: x-large;
   font-weight: bold;
 `
-export const Nav = styled.div`
-
+export const NavUl = styled.ul`
+  display: flex;
 `
-export const MenuLink = styled.a`
-  margin: 0 5px;
+export const NavLi = styled.li`
+  margin-left: 10px;
+`
+export const NavA = styled.a`
+  color: #fff;
   font-size: 18px;
   font-weight: 500;
   padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
+  border: 1px solid #50d603;
   transition: all ease-in-out .3s;
-  &:hover  {
-    background-color: #f0f8ff1c;
+  &:hover {
+    border: 1px solid #50d60386;
   }
 `

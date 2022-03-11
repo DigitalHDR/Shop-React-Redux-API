@@ -38,38 +38,30 @@ export default function Produtos() {
 
   const Loading = () => {
     return (
-      <div>
-        Loading...
-      </div>
-    )
-  }
-
-  const MostrarProdutos = () => {
-    return (
       <PaddingTopGlobal>
-        <Tituto>Produtos a venda</Tituto>
-        <Box>
-          {filter.map((produto) => {
-            return (
-              <Card key={produto.id}>
-                <Image src={produto.image} alt={produto.title} />
-                <hr />
-                <Descricao>
-                  <TituloCard>{produto.title.substring(0, 10)}</TituloCard>
-                  <Paragrafo>{produto.description.substring(0, 50) + '...'}</Paragrafo>
-                </Descricao>
-                <Btn>Comprar</Btn>
-              </Card>
-            )
-          })}
-        </Box>
+        Carregando itens...
       </PaddingTopGlobal>
     )
   }
 
   return (
-    <div>
-      {loading ? <Loading /> : <MostrarProdutos />}
-    </div>
+    <PaddingTopGlobal>
+      <Tituto>Produtos a venda</Tituto>
+      <Box>
+        {loading ? <Loading /> : <>{filter.map((produto) => {
+          return (
+            <Card key={produto.id}>
+              <Image src={produto.image} alt={produto.title} />
+              <hr />
+              <Descricao>
+                <TituloCard>{produto.title.substring(0, 10)}</TituloCard>
+                <Paragrafo>{produto.description.substring(0, 50) + '...'}</Paragrafo>
+              </Descricao>
+              <Btn>Comprar</Btn>
+            </Card>
+          )
+        })}</>}
+      </Box>
+    </PaddingTopGlobal>
   )
 }

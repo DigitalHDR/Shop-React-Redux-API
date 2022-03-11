@@ -1,6 +1,6 @@
 import React from 'react'
 import './navbar.css'
-import { Container, Header, Titulo, Nav, MenuLink } from './styles'
+import { Container, Header, Titulo, NavUl, NavLi, NavA } from './styles'
 
 import { SiHomeadvisor as SiH, SiCountingworkspro as SiC, SiOpsgenie as SiO } from "react-icons/si";
 import { AiOutlineShoppingCart as AiOu } from "react-icons/ai"
@@ -13,14 +13,14 @@ export default function Navbar() {
       <Container>
         <Header>
           <Titulo>REACT REDUX API</Titulo>
-          <Nav>
-            <MenuLink href='#'><SiH className='Si' />Home</MenuLink>
-            <MenuLink href='#'><SiC className='Si' />Sobre</MenuLink>
-            <MenuLink href='#'><SiO className='Si' />Contato</MenuLink>
-            <MenuLink href='#'><BiLo className='Si' />Logar</MenuLink>
-            <MenuLink href='#'><FaRe className='Si' />Registrar</MenuLink>
-            <MenuLink href='#'><AiOu className='Si' /></MenuLink>
-          </Nav>
+          <NavUl>
+            <NavLi><NavA href='#'><SiH className='Si' />Home</NavA></NavLi>
+            <NavLi><NavA href='#'><SiC className='Si' />Sobre</NavA></NavLi>
+            <NavLi><NavA href='#'><SiO className='Si' />Contato</NavA></NavLi>
+            <NavLi ><NavA href='#'><BiLo className='Si' />Logar</NavA></NavLi>
+            <NavLi ><NavA href='#'><FaRe className='Si' />Registrar</NavA></NavLi>
+            <NavLi ><NavA href='#'><AiOu className='Si' /></NavA></NavLi>
+          </NavUl>
         </Header>
       </Container>
     </div>
