@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { PaddingTopGlobal } from '../../styles/GlobalStyles'
+import { PaddingTopGlobal, TitutoGlobal } from '../../styles/GlobalStyles'
 import BotaoFilter from '../../components/BotaoFilter'
 import BotaoCard from '../../components/BotaoCard'
+import { NavLink } from 'react-router-dom'
 
 import {
-  Tituto,
   Card,
   Box,
   Image,
@@ -52,7 +52,7 @@ export default function Produtos() {
 
   return (
     <PaddingTopGlobal>
-      <Tituto>Produtos a venda</Tituto>
+      <TitutoGlobal>Produtos a venda</TitutoGlobal>
 
       <Box>
         <BotaoFilter onClick={() => setFilter(data)}>all</BotaoFilter>
@@ -74,7 +74,7 @@ export default function Produtos() {
                 </Paragrafo>
                 <p><b>R$ {produto.price}</b></p>
               </Descricao>
-              <BotaoCard>Comprar</BotaoCard>
+              <NavLink to={`/produtos/${produto.id}`}><BotaoCard>Comprar</BotaoCard></NavLink>
             </Card>
           )
         })}</>}

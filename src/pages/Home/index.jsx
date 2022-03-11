@@ -1,7 +1,12 @@
 import React from 'react'
+import { PaddingTopGlobal, FlexGlobal, TitutoGlobal } from '../../styles/GlobalStyles'
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <PaddingTopGlobal>
+      <FlexGlobal>
+        <TitutoGlobal>Home</TitutoGlobal>
+      </FlexGlobal>
+    </PaddingTopGlobal>
   )
 }

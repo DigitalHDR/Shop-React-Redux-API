@@ -37,5 +37,5 @@ export const TituloCard = styled.h4`
 export const Paragrafo = styled.p`
   font-size: 18px;
   padding: 0 10px;
-  font-weight: 200;
+  font-weight: 400;
 `

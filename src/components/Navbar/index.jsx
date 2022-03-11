@@ -2,6 +2,7 @@ import React from 'react'
 import './navbar.css'
 import { Link } from "react-router-dom";
 import { Container, Header, Titulo, NavUl, NavLi, NavA } from './styles'
+import { TitutoGlobal } from '../../styles/GlobalStyles'
 
 import { SiHomeadvisor as SiH, SiCountingworkspro as SiC, SiOpsgenie as SiO } from "react-icons/si";
 import { AiOutlineShoppingCart as AiOu } from "react-icons/ai"
@@ -13,7 +14,7 @@ export default function Navbar() {
     <div>
       <Container>
         <Header>
-          <Titulo>REACT REDUX API</Titulo>
+          <TitutoGlobal>REACT REDUX API</TitutoGlobal>
           <NavUl>
             
             <NavLi>
