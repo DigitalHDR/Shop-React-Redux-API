@@ -1,7 +1,14 @@
+//src/pages/produto/index.jsx
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { BotaoCardGlobal, PaddingTopGlobal, TitutoGlobal } from '../../styles/GlobalStyles'
 import { FaBeer } from 'react-icons/fa';
+//#################do video completo ############
+// import { useDispatch } from 'react-redux'
+// import { addItem } from '../../redux/action';
+//###############################################
+import { useDispatch } from 'react-redux'
+import { addCart } from '../../redux/action';
 
 import {
   Card,
@@ -22,6 +29,11 @@ export default function Produto() {
   const [product, setProduct] = useState([])
   const [loading, setLoading] = useState(false)
 
+  const dispatch = useDispatch()
+  const addProduct = (product) => {
+    dispatch(addCart(product))
+  }
+
   useEffect(() => {
     const getProdutos = async () => {
       setLoading(true)
@@ -35,7 +47,9 @@ export default function Produto() {
   const Loading = () => {
     return (
       <PaddingTopGlobal>
-        Carregando itens...
+        <TitutoGlobal>
+          Carregando itens...
+        </TitutoGlobal>
       </PaddingTopGlobal>
     )
   }
@@ -58,8 +72,11 @@ export default function Produto() {
                   Pontuação: {product.rating && product.rating.rate}
                 </Pontuacao>
                 <BoxBotaoes>
-                  <BotaoCardGlobal>Comprar</BotaoCardGlobal> 
-                  <BotaoCardGlobal>Add Carrinho</BotaoCardGlobal>
+                  <BotaoCardGlobal>Comprar</BotaoCardGlobal>
+                  <BotaoCardGlobal
+                    onClick={() => addProduct(product)}>
+                    Add Carrinho
+                  </BotaoCardGlobal>
                 </BoxBotaoes>
               </Descricao>
             </Card>

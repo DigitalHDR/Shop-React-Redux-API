@@ -40,7 +40,9 @@ export default function Produtos() {
   const Loading = () => {
     return (
       <PaddingTopGlobal>
-        Carregando itens...
+        <TitutoGlobal>
+          Carregando itens...
+        </TitutoGlobal>
       </PaddingTopGlobal>
     )
   }
