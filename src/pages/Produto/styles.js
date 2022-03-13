@@ -15,7 +15,7 @@ export const Card = styled.div`
 `
 export const ImageContainer = styled.div`
   width: 400px;
-  height: 500px;
+  height: 400px;
   display: flex;
   align-items: center;
 `
@@ -27,7 +27,7 @@ export const Image = styled.img`
 `
 export const Descricao = styled.div`
   width: 800px;
-  padding: 30px 20px 0 20px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -24,7 +24,7 @@ export default function Navbar() {
               <NavA href='#'><SiH className='Si' /><Link to="/">Home</Link></NavA>
             </NavLi>
             <NavLi>
-              <NavA href='#'><SiC className='Si' /><Link to="produtos">Produtos</Link></NavA>
+              <NavA href='#'><SiC className='Si' /><Link to="/produtos">Produtos</Link></NavA>
             </NavLi>
             <NavLi>
               <NavA href='#'><SiO className='Si' />Contato</NavA>
@@ -36,7 +36,7 @@ export default function Navbar() {
               <NavA href='#'><FaRe className='Si' />Registrar</NavA>
             </NavLi>
             <NavLi>
-              <NavA href='#'><AiOu className='Si' />({state.length})</NavA>
+              <Link to="/carrinho"><NavA href='#'><AiOu className='Si' />({state.length})</NavA></Link>
             </NavLi>
           </NavUl>
         </Header>

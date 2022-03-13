@@ -56,6 +56,8 @@ export const BtnGlobal = styled.button`
     background: #fff;
   }
 `
+
+//! btn da pagina de carrinho styled a mais.
 export const BotaoCardGlobal = styled.button`
   border: 1px solid #50d603;
   font-size: medium;
@@ -68,6 +70,6 @@ export const BotaoCardGlobal = styled.button`
   align-self: center;
   transition: all ease-in-out .3s;
   &:hover {
-    background: transparent;
+    background: #fff;
   }
 `
