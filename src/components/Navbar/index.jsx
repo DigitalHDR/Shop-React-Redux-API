@@ -22,7 +22,7 @@ export default function Navbar() {
         <Header>
           <TitutoGlobal>REACT REDUX API</TitutoGlobal>
 
-          <NavUl id={menu ? 'mostrarMenu' : ''}>
+          <NavUl id={menu ? 'MostrarMenu' : ''}>
             <NavLi onClick={() => setMenu(!menu)}>
               <NavA href='#'><SiH className='Si' /><Link to="/">Home</Link></NavA>
             </NavLi>
@@ -54,3 +54,8 @@ export default function Navbar() {
     </div>
   )
 }
+
+{/* LINHA 46 (DIFERENTE DE MENU FALSE É MENU VERDADEIRO,)
+              LINHA 25 (ENTÃO 'MOSTRARMENU')
+              ISSO FAZ O MENU APARECER
+    LINHA 17 MENU COMEÇA COM FALSE */}

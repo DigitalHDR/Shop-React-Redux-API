@@ -15,7 +15,7 @@ export const Titulo = styled.h3`
   font-size: x-large;
   font-weight: bold;
 `
-export const MenuHamburguer = styled.h3`
+export const MenuHamburguer = styled.div`
   display: none;
   @media(max-width: 1120px) {
     display: flex;

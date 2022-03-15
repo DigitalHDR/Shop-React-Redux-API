@@ -7,7 +7,7 @@
 }
 
 @media(max-width: 1120px) {
-  #mostrarMenu {
+  #MostrarMenu {
     display: flex;
     z-index: 10;
     position: absolute;
@@ -20,14 +20,14 @@
     align-items: center;
   }
 
-  #mostrarMenu li:hover {
+  #MostrarMenu li:hover {
     width: 100%;
     text-align: center;
     margin-left: initial;
     background-color: #15226b;
   }
 
-  #mostrarMenu a {
+  #MostrarMenu a {
     line-height: 2.5;
     border: none;
   }
