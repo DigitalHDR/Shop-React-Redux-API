@@ -17,6 +17,8 @@ export const Titulo = styled.h3`
 `
 export const MenuHamburguer = styled.div`
   display: none;
+  flex-grow: 1;
+  justify-content: end;
   @media(max-width: 1120px) {
     display: flex;
   }
@@ -40,5 +42,11 @@ export const NavA = styled.a`
   transition: all ease-in-out .3s;
   &:hover {
     border: 1px solid #50d60386;
+  }
+`
+export const CarrinhoMenu = styled.li`
+  display: none;
+  @media(max-width: 1120px) {
+    display: flex;
   }
 `

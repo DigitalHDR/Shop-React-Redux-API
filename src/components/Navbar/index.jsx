@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import './navbar.css'
 import { Link } from "react-router-dom";
-import { Container, Header, NavUl, NavLi, NavA, MenuHamburguer } from './styles'
+import { Container, Header, NavUl, NavLi, NavA, MenuHamburguer, CarrinhoMenu } from './styles'
 import { TitutoGlobal } from '../../styles/GlobalStyles'
 import { useSelector } from 'react-redux'
 
@@ -46,9 +46,16 @@ export default function Navbar() {
           <MenuHamburguer onClick={() => setMenu(!menu)}>
             {menu ?
               <AiOutlineClose color='#fff' fontSize={30} /> :
-              <AiOutlineMenu color='#fff' fontSize={30} /> }
+              <AiOutlineMenu color='#fff' fontSize={30} />}
           </MenuHamburguer>
 
+          <CarrinhoMenu style={{ color: '#fff', marginLeft: 5 }}>
+            <Link to="/carrinho">
+              <AiOu className='Si' />
+              {state.length}
+            </Link>
+          </CarrinhoMenu>
+          
         </Header>
       </Container>
     </div>
