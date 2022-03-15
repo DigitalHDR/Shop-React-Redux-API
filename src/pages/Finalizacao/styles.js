@@ -4,14 +4,25 @@ export const FormContainer = styled.div`
   display: flex;
   background-color: #fff;
 `
+export const ContainerBox = styled.div`
+  display: flex;
+  justify-content: center;
+`
 export const Box = styled.div`
+  max-width: 1100px;
   background-color: #fff;
   margin-top: 20px;
   border-radius: 5px;
   padding: 10px;
+  display: flex;
+  
+  @media(max-width: 1077px) {
+    flex-direction: column-reverse;
+  }
 `
 export const Form = styled.form`
   display: flex;
+  padding: 0 10px;
   flex-direction: column;
   hr {
     margin: 20px 0;
@@ -65,8 +76,11 @@ export const Bolinha = styled.div`
   background-color: blue;
 `
 export const TabelaLista = styled.div`
-  margin-top: 10px;
-
+  margin-top: 20px;
+  width: 350px;
+  @media(max-width: 1077px) {
+    width: 100%;
+  }
 `
 export const TabelaListaItem = styled.div`
   display: flex;
@@ -84,5 +98,5 @@ export const TabelaTiulo = styled.div`
   flex-grow: 1;
 `
 export const Preco = styled.div`
-  min-width: 100px;
+  min-width: 75px;
 `

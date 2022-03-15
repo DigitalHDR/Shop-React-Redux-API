@@ -15,8 +15,17 @@ export const Titulo = styled.h3`
   font-size: x-large;
   font-weight: bold;
 `
+export const MenuHamburguer = styled.h3`
+  display: none;
+  @media(max-width: 1120px) {
+    display: flex;
+  }
+`
 export const NavUl = styled.ul`
   display: flex;
+  @media(max-width: 1120px) {
+    display: none;
+  }
 `
 export const NavLi = styled.li`
   margin-left: 10px;
