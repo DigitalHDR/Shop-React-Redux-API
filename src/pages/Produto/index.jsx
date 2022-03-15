@@ -1,6 +1,6 @@
 //src/pages/produto/index.jsx
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { BotaoCardGlobal, PaddingTopGlobal, TitutoGlobal } from '../../styles/GlobalStyles'
 import { FaBeer } from 'react-icons/fa';
 //#################do video completo ############
@@ -72,7 +72,13 @@ export default function Produto() {
                   Pontuação: {product.rating && product.rating.rate}
                 </Pontuacao>
                 <BoxBotaoes>
-                  <BotaoCardGlobal>Comprar</BotaoCardGlobal>
+                  <BotaoCardGlobal >
+                    <NavLink
+                      style={{ color: '#000' }}
+                      to='/finalizacao'>
+                      Comprar
+                    </NavLink>
+                  </BotaoCardGlobal>
                   <BotaoCardGlobal
                     onClick={() => addProduct(product)}>
                     Add Carrinho

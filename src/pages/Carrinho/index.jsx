@@ -1,3 +1,4 @@
+//pages/carrinho/index.jsx
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
@@ -65,7 +66,7 @@ export default function Cart() {
   const button = () => {
     return (
       <>
-        <NavLink to="/checkout">
+        <NavLink to="/finalizacao">
           <BotaoCardGlobal>
             Fazer a comprar
           </BotaoCardGlobal>
