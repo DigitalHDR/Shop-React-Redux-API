@@ -12,18 +12,31 @@ export const Card = styled.div`
   background-color: #fff;
   display: flex;
   flex-direction: row;
+  @media(max-width: 880px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 export const ImageContainer = styled.div`
   width: 400px;
   height: 400px;
   display: flex;
   align-items: center;
+  @media(max-width: 880px) {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
 `
 export const Image = styled.img`
   width: 400px;
   height: 400px;
-  padding: 10px;
+  padding: 30px 0 30px 0;
   object-fit: contain;
+  @media(max-width: 880px) {
+    padding: 30px 0 0 0;
+    width: 80%;
+  }
 `
 export const Descricao = styled.div`
   width: 800px;
@@ -32,9 +45,19 @@ export const Descricao = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  @media(max-width: 880px) {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  }
 `
 export const TituloCard = styled.h4`
- font-size: 40px;
+  font-size: 40px;
+  @media(max-width: 880px) {
+  font-size: 30px;
+  }
 `
 export const Paragrafo = styled.p`
   font-size: 18px;

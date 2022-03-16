@@ -2,11 +2,6 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import { BotaoCardGlobal, PaddingTopGlobal, TitutoGlobal, MarginTopGlobal } from '../../styles/GlobalStyles'
-import { FaBeer } from 'react-icons/fa';
-//#################do video completo ############
-// import { useDispatch } from 'react-redux'
-// import { addItem } from '../../redux/action';
-//###############################################
 import { useDispatch } from 'react-redux'
 import { addCart } from '../../redux/action';
 
@@ -27,7 +22,6 @@ import {
 export default function Produto() {
   const { id } = useParams()
   const [product, setProduct] = useState([])
-  const [filter, setFilter] = useState(product)
   const [loading, setLoading] = useState(false)
 
   const dispatch = useDispatch()
@@ -40,7 +34,7 @@ export default function Produto() {
     const getProdutos = async () => {
       setLoading(true)
       const resposta = await fetch(`https://fakestoreapi.com/products/${id}`)
-      setProduct(await resposta.json())
+      setProduct(await resposta.clone().json())
       setLoading(false)
     }
     getProdutos()
@@ -54,6 +48,11 @@ export default function Produto() {
         </TitutoGlobal>
       </PaddingTopGlobal>
     )
+  }
+
+  const Fixed = (product) => {
+    const doisZeros = parseFloat(product.price)
+    return doisZeros.toFixed(2)
   }
 
   return (
@@ -70,7 +69,7 @@ export default function Produto() {
               <Descricao>
                 <TituloCard>{product.title}</TituloCard>
                 <Paragrafo>{product.description}</Paragrafo>
-                <Price>R$ {filter.price} </Price>
+                <Price>R$ {Fixed(product)}</Price>
                 <Pontuacao>
                   Pontuação: {product.rating && product.rating.rate}
                 </Pontuacao>

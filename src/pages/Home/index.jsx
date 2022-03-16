@@ -6,7 +6,7 @@ export default function Home() {
     <PaddingTopGlobal>
       <MarginTopGlobal />
       <FlexGlobal>
-        <TitutoGlobal>Homeeeeee</TitutoGlobal>
+        <TitutoGlobal>Home</TitutoGlobal>
       </FlexGlobal>
     </PaddingTopGlobal>
   )

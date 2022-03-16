@@ -31,21 +31,21 @@ export default function Navbar() {
         <Header>
           <TitutoGlobal>REACT REDUX API</TitutoGlobal>
           <NavUl id={menu ? 'MostrarMenu' : ''}>
-            <NavLi onClick={() => setMenu(!menu)}>
+            {/* <NavLi onClick={() => setMenu(!menu)}>
               <NavA href='#'><SiH className='Si' /><Link to="/">Home</Link></NavA>
-            </NavLi>
+            </NavLi> */}
             <NavLi onClick={() => setMenu(!menu)}>
               <NavA href='#'><SiC className='Si' /><Link to="/produtos">Produtos</Link></NavA>
             </NavLi>
-            <NavLi onClick={() => setMenu(!menu)}>
+            {/* <NavLi onClick={() => setMenu(!menu)}>
               <NavA href='#'><SiO className='Si' />Contato</NavA>
-            </NavLi>
-            <NavLi onClick={() => setMenu(!menu)}>
+            </NavLi> */}
+            {/* <NavLi onClick={() => setMenu(!menu)}>
               <NavA href='#'><BiLo className='Si' />Logar</NavA>
-            </NavLi>
-            <NavLi onClick={() => setMenu(!menu)}>
+            </NavLi> */}
+            {/* <NavLi onClick={() => setMenu(!menu)}>
               <NavA href='#'><FaRe className='Si' />Registrar</NavA>
-            </NavLi>
+            </NavLi> */}
             <NavLi onClick={() => setMenu(!menu)}>
               <Link to="/carrinho"><NavA href='#'><AiOu className='Si' />({state.length})</NavA></Link>
             </NavLi>
