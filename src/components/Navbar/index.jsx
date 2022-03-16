@@ -35,7 +35,7 @@ export default function Navbar() {
               <NavA href='#'><SiH className='Si' /><Link to="/">Home</Link></NavA>
             </NavLi> */}
             <NavLi onClick={() => setMenu(!menu)}>
-              <NavA href='#'><SiC className='Si' /><Link to="/produtos">Produtos</Link></NavA>
+              <Link to="/produtos"><NavA href='#'><SiC className='Si' />Produtos</NavA></Link>
             </NavLi>
             {/* <NavLi onClick={() => setMenu(!menu)}>
               <NavA href='#'><SiO className='Si' />Contato</NavA>

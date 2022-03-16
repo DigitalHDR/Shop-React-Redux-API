@@ -36,7 +36,7 @@ export const NavUl = styled.ul`
 export const NavLi = styled.li`
   margin-left: 10px;
 `
-export const NavA = styled.a`
+export const NavA = styled.div`
   color: #fff;
   font-size: 18px;
   font-weight: 500;
