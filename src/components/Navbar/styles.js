@@ -2,7 +2,10 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   padding: 20px 7%;
-  background-color: #f0f8ff10;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: #170b29;
   box-shadow: 0px 10px 27px -12px #50d603;
 `
 export const Header = styled.header`
@@ -25,6 +28,7 @@ export const MenuHamburguer = styled.div`
 `
 export const NavUl = styled.ul`
   display: flex;
+      transition: all ease-in-out 0.5s;
   @media(max-width: 1120px) {
     display: none;
   }

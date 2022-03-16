@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
-import { BotaoCardGlobal, PaddingTopGlobal, TitutoGlobal } from '../../styles/GlobalStyles'
+import { BotaoCardGlobal, PaddingTopGlobal, TitutoGlobal, MarginTopGlobal } from '../../styles/GlobalStyles'
 import { CardContainer, Card, Paragrafo, Image, ImageContainer, Descricao, TituloCard } from './styles'
 
 import { delCart } from '../../redux/action'
@@ -78,6 +78,7 @@ export default function Cart() {
   return (
     <CardContainer>
       <PaddingTopGlobal>
+        <MarginTopGlobal />
         <TitutoGlobal>Carrinho</TitutoGlobal>
         {state.length === 0 && emptyCart()}
         {state.length !== 0 && state.map(cartItems)}

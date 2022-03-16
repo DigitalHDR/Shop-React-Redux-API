@@ -22,17 +22,14 @@ export default function Navbar() {
         setMenu(false)
       }
     }
-
     window.addEventListener('scroll', scrollAtivo)
   },[])
-
 
   return (
     <div>
       <Container>
         <Header>
           <TitutoGlobal>REACT REDUX API</TitutoGlobal>
-
           <NavUl id={menu ? 'MostrarMenu' : ''}>
             <NavLi onClick={() => setMenu(!menu)}>
               <NavA href='#'><SiH className='Si' /><Link to="/">Home</Link></NavA>
@@ -66,7 +63,6 @@ export default function Navbar() {
               {state.length}
             </Link>
           </CarrinhoMenu>
-          
         </Header>
       </Container>
     </div>

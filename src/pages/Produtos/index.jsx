@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { PaddingTopGlobal, TitutoGlobal } from '../../styles/GlobalStyles'
+import { PaddingTopGlobal, TitutoGlobal, MarginTopGlobal } from '../../styles/GlobalStyles'
 import BotaoFilter from '../../components/BotaoFilter'
 import BotaoCard from '../../components/BotaoCard'
 import { NavLink } from 'react-router-dom'
@@ -54,8 +54,8 @@ export default function Produtos() {
 
   return (
     <PaddingTopGlobal>
+      <MarginTopGlobal />
       <TitutoGlobal>Produtos a venda</TitutoGlobal>
-
       <Box>
         <BotaoFilter onClick={() => setFilter(data)}>all</BotaoFilter>
         <BotaoFilter onClick={() => filterProduto("men's clothing")}>Men's clothing</BotaoFilter>

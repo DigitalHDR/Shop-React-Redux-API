@@ -73,3 +73,6 @@ export const BotaoCardGlobal = styled.button`
     background: #fff;
   }
 `
+export const MarginTopGlobal = styled.div`
+  margin-top: 100px;
+`

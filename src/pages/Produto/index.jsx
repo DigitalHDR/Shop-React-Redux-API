@@ -1,7 +1,7 @@
 //src/pages/produto/index.jsx
 import React, { useState, useEffect } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
-import { BotaoCardGlobal, PaddingTopGlobal, TitutoGlobal } from '../../styles/GlobalStyles'
+import { BotaoCardGlobal, PaddingTopGlobal, TitutoGlobal, MarginTopGlobal } from '../../styles/GlobalStyles'
 import { FaBeer } from 'react-icons/fa';
 //#################do video completo ############
 // import { useDispatch } from 'react-redux'
@@ -59,6 +59,7 @@ export default function Produto() {
   return (
     <>
       <PaddingTopGlobal>
+        <MarginTopGlobal/>
         <TitutoGlobal>Produtos</TitutoGlobal>
         {loading ? <Loading /> :
           <CardContainer >
