@@ -56,7 +56,7 @@ export const InputText = styled.input`
 export const FormPaisEstadoCep = styled.div`
   display: flex;
 `
-export const Preferencias = styled.div`
+export const FormPreferencias = styled.div`
   display: flex;
   flex-direction: column;
 `
