@@ -55,6 +55,7 @@ export const InputText = styled.input`
   width: 100%;
   border: 1px solid #000;
   border-radius: 3px;
+  padding-left: 5px;
   height: 35px;
   font-size: 17px;
   @media(max-width: 640px) {
