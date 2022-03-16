@@ -19,16 +19,16 @@ export default function Cart() {
 
   const cartItems = (cartItem) => {
     return (
-      <>
-        <CardContainer>
-          <Card>
+      <div key={cartItem.id}>
+        <CardContainer >
+          <Card >
             <ImageContainer>
               <Image src={cartItem.image} alt={cartItem.title} />
             </ImageContainer>
 
             <Descricao>
               <TituloCard>{cartItem.title}</TituloCard>
-              <Paragrafo>R$ {cartItem.price}</Paragrafo>
+              <Paragrafo>R$ {cartItem.price.toFixed(2)}</Paragrafo>
             </Descricao>
 
             <BotaoCardGlobal
@@ -44,7 +44,7 @@ export default function Cart() {
             </BotaoCardGlobal>
           </Card>
         </CardContainer>
-      </>
+      </div>
     )
   }
 

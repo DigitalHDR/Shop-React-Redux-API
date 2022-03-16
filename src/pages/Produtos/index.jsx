@@ -74,7 +74,7 @@ export default function Produtos() {
                 <Paragrafo>
                   {produto.description.substring(0, 50) + '...'}
                 </Paragrafo>
-                <p><b>R$ {produto.price}</b></p>
+                <p><b>R$ {produto.price.toFixed(2)}</b></p>
               </Descricao>
               <NavLink to={`/produtos/${produto.id}`}><BotaoCard>Comprar</BotaoCard></NavLink>
             </Card>

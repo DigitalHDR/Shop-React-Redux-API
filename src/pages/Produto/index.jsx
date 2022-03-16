@@ -67,7 +67,7 @@ export default function Produto() {
               <Descricao>
                 <TituloCard>{product.title}</TituloCard>
                 <Paragrafo>{product.description}</Paragrafo>
-                <Price>R$ {product.price}</Price>
+                <Price>R$ {product.price.toFixed(2)}</Price>
                 <Pontuacao>
                   Pontuação: {product.rating && product.rating.rate}
                 </Pontuacao>

@@ -49,7 +49,7 @@ export default function DadosDeEntrega() {
         </Label>
       </FormName>
       <FormPaisEstadoCep>
-        <FormNameContainer>
+        <FormNameContainer style={{ width: '70%' }}>
           <FormName>
             <Label>País
               <InputText type="text" />

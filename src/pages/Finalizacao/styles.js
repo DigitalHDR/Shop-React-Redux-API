@@ -30,9 +30,15 @@ export const Form = styled.form`
 `
 export const FormContainerBox = styled.div`
   display: flex;
+  @media(max-width: 640px) {
+    flex-direction: column;
+  }
 `
 export const FormNameContainer = styled.div`
   width: 100%;
+  @media(max-width: 640px) {
+    width: 100% !important;
+  } 
 `
 export const FormName = styled.div`
   margin: 10px 10px 0px 0px;
@@ -50,11 +56,16 @@ export const InputText = styled.input`
   border: 1px solid #000;
   border-radius: 3px;
   height: 35px;
-
   font-size: 17px;
+  @media(max-width: 640px) {
+    width: 100% !important;
+  }
 `
 export const FormPaisEstadoCep = styled.div`
   display: flex;
+  @media(max-width: 640px) {
+    flex-direction: column;
+  }
 `
 export const FormPreferencias = styled.div`
   display: flex;
