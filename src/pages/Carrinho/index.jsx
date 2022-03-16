@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 import { BotaoCardGlobal, PaddingTopGlobal, TitutoGlobal, MarginTopGlobal } from '../../styles/GlobalStyles'
-import { CardContainer, Card, Paragrafo, Image, ImageContainer, Descricao, TituloCard } from './styles'
+import { CardContainer, Card, Paragrafo, Image, ImageContainer, Descricao, TituloCard, BotaoCard } from './styles'
 
 import { delCart } from '../../redux/action'
 
@@ -31,7 +31,7 @@ export default function Cart() {
               <Paragrafo>R$ {cartItem.price.toFixed(2)}</Paragrafo>
             </Descricao>
 
-            <BotaoCardGlobal
+            <BotaoCard
               //!styled + porque tem em outro lugar o mesmo
               style={{
                 display: 'flex',
@@ -41,7 +41,7 @@ export default function Cart() {
               }}
               onClick={() => handleClose(cartItem)}>
               X
-            </BotaoCardGlobal>
+            </BotaoCard>
           </Card>
         </CardContainer>
       </div>
