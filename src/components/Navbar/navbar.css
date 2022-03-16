@@ -20,15 +20,18 @@
     align-items: center;
   }
 
-  #MostrarMenu li:hover {
+  #MostrarMenu li {
     width: 100%;
+    padding: 10px 0;
     text-align: center;
     margin-left: initial;
-    background-color: #15226b;
+  }
+
+  #MostrarMenu li:hover {
+    background-color: #1f324e81;
   }
 
   #MostrarMenu a {
-    line-height: 2.5;
     border: none;
   }
 }
