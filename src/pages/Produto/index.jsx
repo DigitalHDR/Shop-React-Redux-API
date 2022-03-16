@@ -27,9 +27,11 @@ import {
 export default function Produto() {
   const { id } = useParams()
   const [product, setProduct] = useState([])
+  const [filter, setFilter] = useState(product)
   const [loading, setLoading] = useState(false)
 
   const dispatch = useDispatch()
+
   const addProduct = (product) => {
     dispatch(addCart(product))
   }
@@ -67,7 +69,7 @@ export default function Produto() {
               <Descricao>
                 <TituloCard>{product.title}</TituloCard>
                 <Paragrafo>{product.description}</Paragrafo>
-                <Price>R$ {product.price.toFixed(2)}</Price>
+                <Price>R$ {filter.price} </Price>
                 <Pontuacao>
                   Pontuação: {product.rating && product.rating.rate}
                 </Pontuacao>

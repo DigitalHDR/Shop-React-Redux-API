@@ -1,5 +1,5 @@
 //src/componensts/navbar/index.jsx
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './navbar.css'
 import { Link } from "react-router-dom";
 import { Container, Header, NavUl, NavLi, NavA, MenuHamburguer, CarrinhoMenu } from './styles'
@@ -15,6 +15,17 @@ export default function Navbar() {
   const state = useSelector((state) => state.handleCart)
 
   const [menu, setMenu] = useState(false)
+
+  useEffect(() => {
+    const scrollAtivo = () => {
+      if (window.scrollY > 1) {
+        setMenu(false)
+      }
+    }
+
+    window.addEventListener('scroll', scrollAtivo)
+  },[])
+
 
   return (
     <div>
