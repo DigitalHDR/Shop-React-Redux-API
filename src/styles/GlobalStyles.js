@@ -40,6 +40,9 @@ export const TitutoGlobal = styled.h1`
   font-size: xx-large;
   text-align: center;
   color: #fff;
+  @media(max-width: 650px) {
+    font-size: 20px;
+  }
 `
 export const BtnGlobal = styled.button`
   border: 1px solid #50d603;
