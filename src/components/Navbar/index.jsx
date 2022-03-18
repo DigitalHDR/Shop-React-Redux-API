@@ -29,7 +29,7 @@ export default function Navbar() {
     <div>
       <Container>
         <Header>
-          <TitutoGlobal>REACT REDUX API</TitutoGlobal>
+          <TitutoGlobal><Link to="/produtos">REACT REDUX API</Link></TitutoGlobal>
           <NavUl id={menu ? 'MostrarMenu' : ''}>
             {/* <NavLi onClick={() => setMenu(!menu)}>
               <NavA href='#'><SiH className='Si' /><Link to="/">Home</Link></NavA>

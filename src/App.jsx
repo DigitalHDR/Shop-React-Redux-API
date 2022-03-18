@@ -14,8 +14,8 @@ export default function App() {
       <Navbar />
       <ContainerGlobal>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path='/produtos' element={<Produtos />} />
+          <Route index path='/produtos' element={<Produtos />} />
+          {/* <Route path='/produtos' element={<Produtos />} /> */}
           <Route path='/carrinho' element={<Carrinho />} />
           <Route path='/finalizacao' element={<Finalizacao />} />
           <Route path='/produtos/:id' element={<Produto />} />
