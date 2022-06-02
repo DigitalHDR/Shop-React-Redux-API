@@ -1,5 +1,7 @@
-### Redux simples
+![dfgfdgfs](https://user-images.githubusercontent.com/73972922/171724995-693220fd-32d5-40bc-9b8c-7606961bfde1.gif)
 
+
+### Redux simples
 **#####################**
 ### `Foi usado uma api e para consumir usei Fetch()`
 ### `Loading na pagina caso a api demore pra dar resposta`
